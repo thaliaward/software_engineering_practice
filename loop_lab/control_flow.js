@@ -50,3 +50,26 @@ let isAuthenticated = true;
 let authenticationStatus = isAuthenticated ? "Authenticated" : "Not authenticated";
 
 console.log("Authentication Status:", authenticationStatus);
+
+let authorization = "enrolled";
+let authorizationAccess;
+
+if (authorization === "non-subscriber") {
+    console.log("You need to enroll or subscribe first to access this facility.");
+} else {
+    switch (authorization) {
+        case "employee":
+            authorizationAccess = "Dietary Services";
+            break;
+        case "enrolled":
+            authorizationAccess = "Dietary Services and one-on-one interaction with a dietician";
+            break;
+        case "subscriber":
+            authorizationAccess = "Dietary Services only";
+            break;
+        default:
+            authorizationAccess = "No access";
+            break;
+    }
+    console.log("You have access to: ", authorizationAccess);
+}
