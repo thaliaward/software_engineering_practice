@@ -6,9 +6,15 @@ function increaseCount() {
     checkCountValue();
 }
 
+function resetCount() {
+    count = 0;
+    displayCount();
+    alert("The followers count has been reset.");
+}
+
 function checkCountValue() {
     if (count === 10) {
-        alert("Your IG  gained 10 followers!");
+        alert("Your IG gained 10 followers!");
     } else if (count === 20) {
         alert("Your account gained 20 followers!");
     }
